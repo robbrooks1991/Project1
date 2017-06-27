@@ -35,11 +35,12 @@ body {
 }
 
 .fa {
-    padding: 15px;
-    font-size: 25px;
-    width: 50px;
+    padding: 0px;
+    font-size: 10px;
+    width: 25px;
     text-align: center;
     text-decoration: none;
+    color: white;
 }
 
 li:hover {
