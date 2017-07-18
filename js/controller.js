@@ -2,34 +2,55 @@
 
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
-        $scope.title = "THE HOME OF TECHNOW KNOW HOW";
+        $scope.title = "THE HOME OF TECHNO KNOW HOW";
         $scope.title2 = "Listen";
-        $scope.title3 = "Whats-On?";
+        $scope.title3 = "List of DJs";
         $scope.title4 = "Sign-up/Login"
 
     })
 
 
 //DJ List page controller.
+    .controller('djcontroller', ['$scope', function ($scope) {
+        $scope.nina = { name: 'Nina Kraviz', biography: "Producer, occasional vocalist, and DJ Nina Kraviz hails from Irkutsk, Siberia -- not exactly a dance music hot spot. Kraviz fell under the spell of house music during the mid-'90s through radio. A few years later, she moved to Moscow for the sake of studying dentistry, and was briefly part of a trio called MySpaceRocket" };
+        $scope.andrew = { name: 'Andrew Weatherall', biography: "Andrew Weatherall has carved out a well-respected career in British techno. As a producer moving from the sounds of Madchester to downbeat to experimental techno through the '90s, Weatherall could've easily ridden the big beat (Chemical Brothers) or high-profile-DJ (Oakenfold) waves at the end of the decade, choosing instead to pursue -- and in many ways define -- a more cutting-edge, IDM approach." };
+        $scope.bicep = { name: 'Bicep', biography: "London based, Belfast-born blogger-production-dj duo Matt McBriar and Andy Ferguson need little by way of introduction. Their 'Feel MyBicep blog' is the go-to place for tastemakers world-wide for lost and forgotten disco / chicago house /  detroit techno / Italo edits and everything in-between. On a production tip, they have released on such labels as Throne Of Blood, Traveller Records, Mystery Meat and 2012 saw their critically acclaimed vinyl only track $tripper get released on Love Fever hitting the top chart spots on Juno and selling out worldwide." };
+        $scope.atish = { name: 'Atish', biography: "The Atish experience: deep, emotive, ecstatic. It’s more than just the music, though, it’s the man behind the decks: warm, compassionate, inviting. In an age of oversized DJ egos there is still an artist who is devoted to connecting with his audience. Having started his career in 2010 in San Francisco, Atish’s rise as a DJ in dance music has been meteoric." };
+        $scope.lazarus = { name: 'Damian Lazarus', biography: "The mysterious allure of musical vibrations can perplex and intrigue in equal amounts at the best of times, not least when the sorcery of a certain Damian Lazarus comes into play. Crosstown Rebels, Day Zero, Get Lost, Rebel Rave, his own DJand production career, the discovery of a wealth of influential talents… all of these achievements and more make him not only one of the most respected exponents of the contemporary house and techno scene, but also one of its key tastemakersand pathfinders." };
+        $scope.doering = { name: 'Dirty Doering', biography: "If all went according to plan you wouldn’t be the least interested in this text. Indeed the story of young Velten who leaves his hometown in the Black Forest to find an orderly apprenticeship in Berlin and who grows up over time – such a story wouldn’t be very gripping. Fortunately there is a club in Berlin that is called „Ostgut“ and people like Velten who like to make irrational decisions from" };
+        $scope.velvet = { name: 'Green Velvet', biography: "Green Velvet (aka Cajmere) studied chemical engineering at the University of Illinois, where he exposed himself to the energetic culture and lifestyle of house. In 1991, midway though graduate school, Cajmere returned to Chicago to pursue his dream of producing house music. In 1992, after surviving on cheese sandwiches and maximizing credit limits, Cajmere finally made an imprint on the dance community with his infectious experiment, 'Coffee Pot' (It's Time for the Percolator) – Clubhouse Records. Then he moved on to more complex musical and lyrical arrangements with songs like Lidell Townsell's 'Get With U' (Mercury Records)." };
+        $scope.midland = { name: 'Midland', biography: "Since he first surfaced in 2010, Harry Agius has been a chameleonic talent, a producer of surreal club cuts as well as modern pop songs. A house DJ always flirting with techno, disco and the sounds of his native UK, delivering his kaleidoscopic taste with mixing technique that nods as much to his UK lineage as it does a smoother European style." };
+        $scope.maceo = { name: 'Maceo Plex', biography: "Eric Estornel, better known by his stage names Maceo Plex and Maetrik, is an American DJ, producer and DJ Awards winner from Dallas and Miami, United States, origin of Cuba. He now resides in Barcelona, Spain with his wife and kids. He is best known for diverse production style, influenced primarily by house and techno but also tech house con suoni techno,[1] as well as a longtime performer for many Ibiza-based clubs, including Space and Amnesia." };
+        $scope.chemical = { name: 'Chemical Brothers', biography: "Tom Rowlands (b. Henley-on-Thames, Oxfordshire, England) and Edward Simons (b. Dulwich, London, England) met while studying history at Manchester Polytechnic in the late 80s. At the same time the pair found a common interest in acid house, techno and hip-hop and began DJing at house parties, calling themselves the Dust Brothers after the west coast hip-hop producers." };
+        $scope.prydz = { name: 'Eric Prydz', biography: "Eric Prydz is on a roll at the moment, without doubt leading the way. His labels Mouseville, Pryda, & Pryda Friends are positively brimming with underground club hits. Eric is now in charge of three highly respected labels whose releases are  in feverish demand, consistently selling huge quantities of vinyl which is truly incredible in the markets current climate." };
+        $scope.jackmaster = { name: 'Jackmaster', biography: "You never know exactly what you’re going to hear with Jackmaster. The element of glorious surprise is crucial to his sets: from the lost Dance Mania gems he spends his time unearthing to forgotten Disco tracks to straight-up house and techno sets, the Numbers co-founder has more options up his sleeve than just about any other DJ out there – and a rare knack for connecting seemingly disparate style." };
+        $scope.beyer = { name: 'Adam Beyer', biography: "From the fertile Swedish underground to the peak of global club culture, the reign of Adam Beyer continues to pull on the heartstrings of modern techno like few others of the time. A festival headliner, sought after recording artist and enigmaticDJ entity, the Stockholm-based heavyweight’s brick-by-brick legacy has seen his functional and focussed take on the techno sound become one of the genre’s most sought after and respected sounds." };
+        $scope.solomun = { name: 'Solomun', biography: "Solomun plays a major role in redefining European house music with productions, remixes and DJing by taking the very building blocks of House and deftly reconstructing them with a modern twist. A respected underground DJ and producer for anumber of years, his stratospheric rise in popularity kicked off in 2012. The same year Mixmag Magazine voted him as “DJ of the Year." };
+        $scope.dixon = { name: 'Dixon', biography: "NOBODY GOES DEEPER THAN DIXON; THE INNERVISIONS BOSS ON CARVING HIS OWN NICHE. Dixon’s real name is Steffen Berkhahn. He was born in Berlin in 1975, had a promising football career (cut short by injury), chose music instead and became one of the best house and techno DJs in the world. He is married with one child. As someone with access to the internet, all this information is easily available to you. Berkhahn lives what we might (pretentiously) call an ‘examined life’; interviews with, profiles of and, obviously, music by Dixon are just as Googleable as anything else. Perhaps this is why, over recent years, Berkhahn has tended to decline interview requests — maybe he feels he’s been “examined” quite enough." };
+        $scope.claptone = { name: 'Claptone', biography: "In a now long forgotten world, many generations ago, a bird like shape emerged from wooded darkness, floating and fluttering, drifting and dreaming. Backlit by a bright glow of iridescent light, the undecipherable form wore a dazzling golden mask. Its long beak swooped down like an inverted horn and since then, people have referred to the mythical being simply as Claptone. Years spending wandering medieval landscapes have informed Claptone’s view of the world, experiencing both magical mystery and muted melancholy he enchanted onlookers with occult instruments and beguiling sounds. Forever surrounded by a sense of intrigue, the world soon cottoned on to the elusive yet enchanting musical powers of this otherworldly beast. The results are that today his shamanistic sonic powers take him all around the world." };
+        }])
 
-    .controller('DJController', function($scope){
-        $scope.title1 = "Nina Kraviz";
-        $scope.title2 = "Andrew Weatherall";
-        $scope.title3 = "Bicep";
-        $scope.title4 = "Atish";
-        $scope.title5 = "Damian Lazarus";
-        $scope.title6 = "Dirty Doering";
-        $scope.title7 = "Green Velvet";
-        $scope.title8 = "Midland";
-        $scope.title9 = "Maceo Plex";
-        $scope.title10 = "Chemical Brothers";
-        $scope.title11 = "Eric Prydz";
-        $scope.title12 = "Jackmaster";
-        $scope.title13 = "Adam Beyer";
-        $scope.title14 = "Solomun";
-        $scope.title15 = "Dixon";
-        $scope.title16 = "Claptone";
+    .controller('ListenController', function($scope){
+        $scope.DJName = "Nina Kraviz";
+        $scope.DJ_Biography = "Producer, occasional vocalist, and DJ Nina Kraviz hails from Irkutsk, Siberia -- not exactly a dance music hot spot. Kraviz fell under the spell of house music during the mid-'90s through radio. A few years later, she moved to Moscow for the sake of studying dentistry, and was briefly part of a trio called MySpaceRocket. The group released one 12, 2007s Amok, a lean house track with a deep bassline and Kraviz's breathy vocals; the B-side featured a version from U.K. DJ legend Greg Wilson. Kraviz subsequently went solo and made a splash in 2009, when she issued productions on Efdemin's Naïf, Jus-Ed's Underground Quality, and Matt Edwards' Rekids. The following year, Kraviz issued another handful of singles, including a sound clash with Sascha Funke that appeared on BPitch Control. 'Ghetto Kraviz' was her lone 2011 single and set up the release of her first album, a self-titled set for REKIDS. 'Ghetto Kraviz' would prove to be an enduring club track, and was remixed numerous times throughout the decade. Following additional singles on Rekids and Rosa, as well as the Mr. Jones EP in 2013, Kraviz founded the Trip label in 2014. Her installment of !K7s DJ-Kicks series was released in early 2015. Another mix CD, Fabric 91, followed in late 2016.";
+        $scope.first_event = "Nina Kraviz and DJ Sodeyema @ Fabrique - Milano";
+        $scope.second_event = "Nina Kraviz @ Alvatoz - Venice";
+        $scope.first_date = "Firday, 07 April 2017";
+        $scope.second_date = "Saturday, 08 April 2017";
+        $scope.image = "images/NinaKraviz2.jpg";
+        $scope.image2 = "images/NinaKraviz3.png";
+        $scope.image3 = "images/NinaKraviz4.jpg"
+    })
 
-        $scope.h5 = "Short Bio"
+    .controller('andrewController', function($scope){
+        $scope.DJName = "Andrew Weatherall";
+        $scope.DJ_Biography = "Andrew Weatherall has carved out a well-respected career in British techno. As a producer moving from the sounds of Madchester to downbeat to experimental techno through the '90s, Weatherall could've easily ridden the big beat (Chemical Brothers) or high-profile-DJ (Oakenfold) waves at the end of the decade, choosing instead to pursue -- and in many ways define -- a more cutting-edge, IDM approach. He participated in two big-name collaborations which would appear on Warp Records, beginning early on in the label's now highly respected run and remains one of the world's most dedicated and top DJs. There was some music played when I was young, by my parents in my formative years. It was quite... looking back on it, it was quite inspirational, like the first time I ever heard Barry White. That was probably when I was about ten or eleven years old. My parents had this album called ‘Stone Gon’’ which is still one of my favourites. But in general, it was a little bit middle of the road. They had classic early seventies tastes, Neil Diamond, that sort of thing, which never really got me. I think most of my musical discoveries I made entirely myself. The biggest inspiration on me was probably when I was ten or eleven, I saw a trailer on TV for ‘That’ll Be the Day’, the David Essex film about rock ‘n’ roll and working on a fairground. It was the first time I realised there was this mystical world. It wasn’t just about the music, it was the clothes as well. I think that’s the moment I felt a tingle. The first two records I ever bought were T-Rex and Wizzard. And then when punk rock came along, that really scared them, you know, I wasn’t allowed to have punk records in the house, wasn’t allowed to have ‘Never Mind the Bollocks’. That was smuggled in, I hid it under my bed! So you know, the parents were lovely people but they weren’t…there was no real…I don’t know where my musical…where it came from, I mean apart from just saying when you’re eleven or twelve years old, it’s very formative in all areas of your life and when you see shots of Teddy Boys and rock ‘n’ roll artists at that age, it turns your world upside down.Then the other thing was the David Bowie album ‘Pin Ups’. It had a brilliant picture of him on the back, in a blue suit with an eye patch and, you know, when you’re living in the suburbs… It wasn’t a horrible childhood but it was a little bit boring. And you see stuff like that and it makes you realise there’s a whole other life, it opens up worlds, not just musically, but facts and literature and everything… Teddy Boys, David Bowie, glam rock… I found it all off my own back. I didn’t have a mentor, or anyone that I looked up to or whose musical tastes I admired. I’m always looking and the search is sometimes more interesting than the actual finding of people’s music, or making the discovery.”"
+        $scope.first_event = "Nina Kraviz and DJ Sodeyema @ Fabrique - Milano";
+        $scope.second_event = "Nina Kraviz @ Alvatoz - Venice";
+        $scope.first_date = "Firday, 07 April 2017";
+        $scope.second_date = "Saturday, 08 April 2017";
+        $scope.image = "images/andrewweatherall2.jpg";
+        $scope.image2 = "images/NinaKraviz3.png";
+        $scope.image3 = "images/NinaKraviz4.jpg"
     });
 
