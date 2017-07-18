@@ -1,4 +1,4 @@
-angular.module('techno', ['ngRoute', 'RouteControllers']);
+angular.module('techno', ['ngRoute', 'RouteControllers', 'djbuttonDirective']);
 
 angular.module('techno').config(function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);  // Enable href routing without hashes
@@ -9,18 +9,27 @@ angular.module('techno').config(function($locationProvider, $routeProvider) {
     })
         .when('/listofdjs', {
             templateUrl: 'templates/listofdjs.html',
-            controller: 'DJController'
+            controller: 'djcontroller'
         })
-    .when('/listen', {
+
+    .when('/listennina', {
             templateUrl: 'templates/listen.html',
             controller: 'ListenController'
         })
+
+    .when('/listenandrew', {
+            templateUrl: 'templates/listen.html',
+            controller: 'andrewController'
+        })
+
     .when('/gallery', {
             templateUrl: 'templates/gallery.html',
             controller: 'GalleryController'
         })
+
     .when('/account', {
             templateUrl: 'templates/account.html',
             controller: 'AccountController'
         })
 });
+
